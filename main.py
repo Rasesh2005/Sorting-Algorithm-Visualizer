@@ -6,8 +6,8 @@ from pygame.constants import NUMEVENTS
 
 pygame.init()
 
-SLEEPTIME = 1  # milliseconds default value, will be changed further
-NUM_BARS = 20 # default, will be changed further
+SLEEPTIME = None  # milliseconds default value, will be changed further
+NUM_BARS = None # default, will be changed further
 
 #GLOBAL COLORS
 WHITE = (255, 255, 255)
@@ -371,7 +371,7 @@ def mainPage(sortFunc):
             if event.type == pygame.QUIT:
                 pygame.quit()
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_SPACE:
+                if event.key == pygame.K_SPACE and array!=sorted(array):
                     sortFunc()
                 if event.key == pygame.K_r:
                     shuffle(array)
