@@ -15,12 +15,13 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 BLACK = (0, 0, 0)
-BAR_COLOR = (3, 159, 251)
+BAR_COLOR = (3, 159, 251) # Taken from w3school
 
 # CONSTANTS
 WIDTH = 700
 HEIGHT = 600
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption('Sorting Visualizer')
 
 margin = 50
 gap = None
