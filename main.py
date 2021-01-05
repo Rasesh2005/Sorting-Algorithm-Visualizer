@@ -107,18 +107,18 @@ def bubbleSort(*args):
         global array, bars
         drawBars(bars)
         bars = prepareBarList(array)
-        bars[i].set_color(GREEN)
+        bars[j+1].set_color(GREEN)
         bars[j].set_color(GREEN)
         drawBars(bars)
         pygame.time.wait(SLEEPTIME)
-        bars[i].set_color(BAR_COLOR)
+        bars[j+1].set_color(BAR_COLOR)
         bars[j].set_color(BAR_COLOR)
 
     for i in range(len(array)-1):
-        for j in range(i+1, len(array)):
+        for j in range(len(array)-i-1):
             checkExit()
-            if array[i] > array[j]:
-                array[i], array[j] = array[j], array[i]
+            if array[j] > array[j+1]:
+                array[j+1], array[j] = array[j], array[j+1]
                 update()
             update()
 
